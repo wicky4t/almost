@@ -194,7 +194,7 @@ const testimonialBadges: TestimonialBadge[] = [
   { image: "/badges/2.png", position: { top: "15%", left: "70%" }, delay: 1.8, shineDelay: 1.2, shineDuration: 12, scale: 1 },
   { image: "/badges/3.png", position: { top: "25%", left: "20%" }, delay: 2.4, shineDelay: 3.7, shineDuration: 15, scale: 1 },
   { image: "/badges/4.png", position: { top: "30%", left: "87%" }, delay: 3.0, shineDelay: 2.1, shineDuration: 13, scale: 1 },
-  { image: "/badges/5.png", position: { top: "50%", left: "20%" }, delay: 2.1, shineDelay: 4.9, shineDuration: 16, scale: 5 },
+  { image: "/badges/5.png", position: { top: "50%", left: "20%" }, delay: 2.1, shineDelay: 4.9, shineDuration: 16, scale: 1 },
   { image: "/badges/6.png", position: { top: "47%", left: "84%" }, delay: 3.3, shineDelay: 2.8, shineDuration: 12, scale: 1 },
   { image: "/badges/7.png", position: { top: "12%", left: "10%" }, delay: 2.7, shineDelay: 0.5, shineDuration: 14, scale: 1 },
   { image: "/badges/8.png", position: { top: "40%", left: "2%" }, delay: 2.0, shineDelay: 3.2, shineDuration: 13, scale: 1 },
