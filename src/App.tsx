@@ -760,7 +760,7 @@ useEffect(() => {
             <div className="flex flex-col items-center gap-0">
               <Linkedin className="text-white/70 w-8 h-8" />
               <a
-                href="https://www.linkedin.com/in/yourprofile"
+                href="https://www.linkedin.com/in/aamir-naqvi/"
                 target="_blank"
                 rel="noopener noreferrer"
   className="text-white/80 font-bosenAlt text-xl md:text-xl lg:text-2xl tracking-wide hover:text-blue-500 transition-colors duration-200"
