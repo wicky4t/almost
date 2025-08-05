@@ -447,7 +447,7 @@ useEffect(() => {
          {/* base */}
 <div 
   ref={baseRef}
-  className="absolute inset-0 flex items-center justify-center z-30" 
+  className="absolute inset-0 flex items-center justify-center z-10" 
   style={{ top: '24%', left: '1%' }}
 >
   <div className="relative"> 
