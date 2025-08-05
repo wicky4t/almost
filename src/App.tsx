@@ -746,7 +746,7 @@ useEffect(() => {
             <div className="flex flex-col items-center gap-2">
               <Mail className="text-white/70 w-8 h-8" />
               <a
-                href="mailto:broskiagency@gmail.com"
+                href="mailto:broskiagency@gmail.com" 
                 className="text-white/80 font-bosenAlt text-xl md:text-xl lg:text-2xl tracking-wide hover:text-blue-500 transition-colors duration-200"
               >
                 BROSKIAGENCY@GMAIL.COM
