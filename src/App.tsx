@@ -330,6 +330,16 @@ useEffect(() => {
   }
 });
 
+   gsap.to(baseRef.current, {
+  y: 900, // ya 200 if you want smaller slide
+  scrollTrigger: {
+    trigger: heroRef.current,
+    start: "top top",
+    end: "top+=1500", // 🔁 reduce to make it slower & smoother
+    scrub: 3        // 🔁 increase for smoother animation
+  }
+});
+
    gsap.to(eyesRef.current, {
   y: 900, // ya 200 if you want smaller slide
   scrollTrigger: {
@@ -435,7 +445,7 @@ useEffect(() => {
 
          {/* base */}
 <div 
-  ref={portraitRef}
+  ref={baseRef}
   className="absolute inset-0 flex items-center justify-center z-30" 
   style={{ top: '24%', left: '1%' }}
 >
