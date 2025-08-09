@@ -265,6 +265,7 @@ function App() {
   const [isLoading, setIsLoading] = React.useState(true);
   const [showTestimonials, setShowTestimonials] = React.useState(true);
   const [showContact, setShowContact] = React.useState(false);
+  const [showFloatingBar, setShowFloatingBar] = React.useState(false);
   const heroRef = useRef<HTMLDivElement>(null);
   const portraitRef = useRef<HTMLDivElement>(null);
   const baseRef = useRef<HTMLDivElement>(null);
@@ -414,6 +415,14 @@ useEffect(() => {
       start: "top 30%",
       onEnter: () => setShowContact(true),
       onLeaveBack: () => setShowContact(false),
+    });
+
+    // Show floating bar when scrolling past hero
+    ScrollTrigger.create({
+      trigger: heroRef.current,
+      start: "bottom 80%",
+      onEnter: () => setShowFloatingBar(true),
+      onLeaveBack: () => setShowFloatingBar(false),
     });
 
   return () => {
