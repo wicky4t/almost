@@ -566,7 +566,7 @@ useEffect(() => {
           <div  
             className="text-[4rem] md:text-[10rem] lg:text-[20rem] font-bosenAlt text-white select-none leading-none opacity-0 animate-fade-in-delayed"
             style={{
-              animationDelay: '0.1s',  
+              animationDelay: '8.1s',  
               animationFillMode: 'forwards',
               textShadow: '0 10px 20px rgba(0,0,0,0.2)'
             }}
