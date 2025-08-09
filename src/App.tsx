@@ -850,32 +850,7 @@ useEffect(() => {
               </button>
             </div>
 
-            {/* Social Links */}
-            <div className="flex items-center justify-center space-x-4 mt-4 pt-4 border-t border-white/10">
-              <a 
-                href="https://www.instagram.com/aamir.naqvii/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-white/60 hover:text-white transition-colors duration-200"
-              >
-                <span className="font-bosenAlt text-xs tracking-wide">INSTAGRAM</span>
-              </a>
-              <a 
-                href="https://www.linkedin.com/in/aamir-naqvi/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-white/60 hover:text-white transition-colors duration-200"
-              >
-                <span className="font-bosenAlt text-xs tracking-wide">LINKEDIN</span>
-              </a>
-              <a 
-                href="https://mail.google.com/mail/?view=cm&to=broskiagency@gmail.com" 
-                target="_blank"
-                className="text-white/60 hover:text-white transition-colors duration-200"
-              >
-                <span className="font-bosenAlt text-xs tracking-wide">EMAIL</span>
-              </a>
-            </div>
+      
           </div>
         </div>
       )}
