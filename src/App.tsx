@@ -564,7 +564,7 @@ useEffect(() => {
           }}
         >
           <div  
-            className="text-[4rem] md:text-[10rem] lg:text-[20rem] font-bosenAlt text-white select-none leading-none opacity-0 animate-fade-in-delayed"
+            className="text-[4rem] md:text-[10rem] lg:text-[20rem] font-bosenAlt text-grey select-none leading-none opacity-0 animate-fade-in-delayed"
             style={{
               animationDelay: '0.1s',  
               animationFillMode: 'forwards',
