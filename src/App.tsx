@@ -806,49 +806,56 @@ useEffect(() => {
       )}
 
       {/* Floating Bottom Navigation Bar */}
-      {showFloatingBar && (
-        <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 opacity-0 animate-fade-in-delayed"
-             style={{ animationDelay: '0.3s', animationFillMode: 'forwards' }}>
-          <div className="bg-black/50 backdrop-blur-md rounded-2xl px-6 py-4 border border-white/10 shadow-2xl">
-            <div className="flex items-center space-x-8">
-              {/* Home */}
-              <button 
-                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                className="flex items-center space-x-3 text-white/80 hover:text-white transition-colors duration-200 group"
-              >
-                <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors duration-200">
-                  <div className="w-4 h-4 bg-white/60 rounded-sm"></div>
-                </div>
-                <span className="font-bosenAlt text-sm tracking-wide">HOME</span>
-              </button>
+{showFloatingBar && (
+  <div
+    className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 opacity-0 animate-fade-in-delayed"
+    style={{ animationDelay: '0.3s', animationFillMode: 'forwards' }}
+  >
+    <div className="bg-white/10 backdrop-blur-xl rounded-2xl px-8 py-4 border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
+      <div className="flex items-center justify-center space-x-10">
+        
+        {/* Home */}
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="flex items-center space-x-3 text-white/80 hover:text-white transition-colors duration-200 group"
+        >
+          <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors duration-200">
+            <div className="w-4 h-4 bg-white/60 rounded-sm"></div>
+          </div>
+          <span className="font-bosenAlt text-sm tracking-wide">HOME</span>
+        </button>
 
-              {/* Portfolio */}
-              <button 
-                onClick={() => portfolioSectionRef.current?.scrollIntoView({ behavior: 'smooth' })}
-                className="flex items-center space-x-3 text-white/80 hover:text-white transition-colors duration-200 group"
-              >
-                <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors duration-200">
-                  <div className="grid grid-cols-2 gap-1">
-                    <div className="w-1.5 h-1.5 bg-white/60 rounded-sm"></div>
-                    <div className="w-1.5 h-1.5 bg-white/60 rounded-sm"></div>
-                    <div className="w-1.5 h-1.5 bg-white/60 rounded-sm"></div>
-                    <div className="w-1.5 h-1.5 bg-white/60 rounded-sm"></div>
-                  </div>
-                </div>
-                <span className="font-bosenAlt text-sm tracking-wide">PORTFOLIO</span>
-              </button>
-
-              {/* Contact */}
-              <button 
-                onClick={() => document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' })}
-                className="flex items-center space-x-3 text-white/80 hover:text-white transition-colors duration-200 group"
-              >
-                <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors duration-200">
-                  <Mail size={16} className="text-white/60" />
-                </div>
-                <span className="font-bosenAlt text-sm tracking-wide">CONTACT</span>
-              </button>
+        {/* Portfolio */}
+        <button
+          onClick={() => portfolioSectionRef.current?.scrollIntoView({ behavior: 'smooth' })}
+          className="flex items-center space-x-3 text-white/80 hover:text-white transition-colors duration-200 group"
+        >
+          <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors duration-200">
+            <div className="grid grid-cols-2 gap-1">
+              <div className="w-1.5 h-1.5 bg-white/60 rounded-sm"></div>
+              <div className="w-1.5 h-1.5 bg-white/60 rounded-sm"></div>
+              <div className="w-1.5 h-1.5 bg-white/60 rounded-sm"></div>
+              <div className="w-1.5 h-1.5 bg-white/60 rounded-sm"></div>
             </div>
+          </div>
+          <span className="font-bosenAlt text-sm tracking-wide">PORTFOLIO</span>
+        </button>
+
+        {/* Contact */}
+        <button
+          onClick={() => document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' })}
+          className="flex items-center space-x-3 text-white/80 hover:text-white transition-colors duration-200 group"
+        >
+          <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors duration-200">
+            <Mail size={16} className="text-white/60" />
+          </div>
+          <span className="font-bosenAlt text-sm tracking-wide">CONTACT</span>
+        </button>
+        
+      </div>
+    </div>
+  </div>
+)}
 
       
           </div>
