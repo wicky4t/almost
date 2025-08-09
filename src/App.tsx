@@ -265,7 +265,6 @@ function App() {
   const [isLoading, setIsLoading] = React.useState(true);
   const [showTestimonials, setShowTestimonials] = React.useState(true);
   const [showContact, setShowContact] = React.useState(false);
-  const [showFloatingBar, setShowFloatingBar] = React.useState(false);
   const heroRef = useRef<HTMLDivElement>(null);
   const portraitRef = useRef<HTMLDivElement>(null);
   const baseRef = useRef<HTMLDivElement>(null);
@@ -417,14 +416,6 @@ useEffect(() => {
       onLeaveBack: () => setShowContact(false),
     });
 
-    // Show floating bar when scrolling past hero
-    ScrollTrigger.create({
-      trigger: heroRef.current,
-      start: "bottom 80%",
-      onEnter: () => setShowFloatingBar(true),
-      onLeaveBack: () => setShowFloatingBar(false),
-    });
-
   return () => {
     ScrollTrigger.getAll().forEach(trigger => trigger.kill());
   };
@@ -574,7 +565,7 @@ useEffect(() => {
         >
           <div  
             className="text-[4rem] md:text-[10rem] lg:text-[20rem] font-bosenAlt text-white select-none leading-none opacity-0 animate-fade-in-delayed"
-            style={{ 
+            style={{
               animationDelay: '0.1s',  
               animationFillMode: 'forwards', 
               textShadow: '0 10px 20px rgba(0,0,0,0.2)'
@@ -804,64 +795,8 @@ useEffect(() => {
           </div>
         </div>
       )}
-
-      {/* Floating Bottom Navigation Bar */}
-{showFloatingBar && (
-  <div
-    className="fixed bottom-6 left-[50%] -translate-x-1/2 z-50 opacity-0 animate-fade-in-delayed"
-    style={{ animationDelay: '0.3s', animationFillMode: 'forwards' }}
-  >
-    <div className="bg-white/10 backdrop-blur-[40px] rounded-2xl px-8 py-4 border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
-      <div className="flex items-center justify-center space-x-10">
-        
-        {/* Home */}
-        <button
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="flex items-center space-x-3 text-white/80 hover:text-white transition-colors duration-200 group"
-        >
-          <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors duration-200">
-            <div className="w-4 h-4 bg-white/60 rounded-sm"></div>
-          </div>
-          <span className="font-bosenAlt text-sm tracking-wide">HOME</span>
-        </button>
-
-        {/* Portfolio */}
-        <button
-          onClick={() => portfolioSectionRef.current?.scrollIntoView({ behavior: 'smooth' })}
-          className="flex items-center space-x-3 text-white/80 hover:text-white transition-colors duration-200 group"
-        >
-          <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors duration-200">
-            <div className="grid grid-cols-2 gap-1">
-              <div className="w-1.5 h-1.5 bg-white/60 rounded-sm"></div>
-              <div className="w-1.5 h-1.5 bg-white/60 rounded-sm"></div>
-              <div className="w-1.5 h-1.5 bg-white/60 rounded-sm"></div>
-              <div className="w-1.5 h-1.5 bg-white/60 rounded-sm"></div>
-            </div>
-          </div>
-          <span className="font-bosenAlt text-sm tracking-wide">PORTFOLIO</span>
-        </button>
-
-        {/* Contact */}
-        <button
-          onClick={() => document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' })}
-          className="flex items-center space-x-3 text-white/80 hover:text-white transition-colors duration-200 group"
-        >
-          <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors duration-200">
-            <Mail size={16} className="text-white/60" />
-          </div>
-          <span className="font-bosenAlt text-sm tracking-wide">CONTACT</span>
-        </button>
-        
-      </div>
-
-
-
-      
-          </div>
-        </div>
-      )}
     </div>
   );
 }
 
-export default App;
+export default App; 
