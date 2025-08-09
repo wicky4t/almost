@@ -851,7 +851,11 @@ useEffect(() => {
           </div>
           <span className="font-bosenAlt text-sm tracking-wide">CONTACT</span>
         </button>
-      
+        
+      </div>
+
+
+
       
           </div>
         </div>
