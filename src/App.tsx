@@ -708,22 +708,39 @@ useEffect(() => {
             </div>
           </div>
 
-          {/* 6x4 Grid of 9:16 Videos */}
-          <div className="relative mb-20 z-20">
-            <h3 className="text-3xl md:text-4xl font-bosenAlt text-black/80 mb-8 text-center tracking-tight">
-              SOCIAL CONTENT
-            </h3>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
-              {Array.from({ length: 12 }, (_, i) => (
-                <VerticalVideoPlayer 
-                  key={i}
-                  title={String(i + 1).padStart(2, '0')}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
+       {/* 6x4 Grid of 9:16 Videos */}
+<div className="relative mb-20 z-20">
+  <h3 className="text-3xl md:text-4xl font-bosenAlt text-black/80 mb-8 text-center tracking-tight">
+    SOCIAL CONTENT
+  </h3>
+  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
+    {[
+      "https://example.com/video1",
+      "https://example.com/video2",
+      "https://example.com/video3",
+      "https://example.com/video4",
+      "https://example.com/video5",
+      "https://example.com/video6",
+      "https://example.com/video7",
+      "https://example.com/video8",
+      "https://example.com/video9",
+      "https://example.com/video10",
+      "https://example.com/video11",
+      "https://example.com/video12"
+    ].map((url, i) => (
+      <a
+        key={i}
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <VerticalVideoPlayer 
+          title={String(i + 1).padStart(2, '0')}
+        />
+      </a>
+    ))}
+  </div>
+</div>
 
 
      {/* Contact Section */}
