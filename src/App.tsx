@@ -378,12 +378,14 @@ useEffect(() => {
     // bg text animate
   gsap.to(backgroundTextRef.current, {
     y: -300,
-    opacity: 100,
+    opacity: 1,
+    scaleY: 2.5, // Height scale increase for stretch effect
     scrollTrigger: {
       trigger: heroRef.current,
       start: "bottom bottom",
       end: "bottom+=-50 top",
-      scrub: 1
+      scrub: 1,
+      ease: "power2.out"
     }
   });
 
