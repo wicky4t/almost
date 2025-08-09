@@ -728,17 +728,15 @@ useEffect(() => {
       "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4",
       "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
     ].map((src, i) => (
-      <div key={i} className="aspect-[9/16] bg-black rounded-lg overflow-hidden">
-        <video
-          src={src}
-          controls
-          preload="metadata"
-          className="w-full h-full object-cover"
-        />
-      </div>
-    ))} 
+      <VerticalVideoPlayer
+        key={i}
+        src={src}
+        title={`VIDEO ${String(i + 1).padStart(2, '0')}`}
+      />
+    ))}
   </div>
 </div>
+
 
         </div>
       </div>
