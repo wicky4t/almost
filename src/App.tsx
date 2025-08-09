@@ -809,7 +809,7 @@ useEffect(() => {
       {showFloatingBar && (
         <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 opacity-0 animate-fade-in-delayed"
              style={{ animationDelay: '0.3s', animationFillMode: 'forwards' }}>
-          <div className="bg-black/20 backdrop-blur-md rounded-2xl px-6 py-4 border border-white/10 shadow-2xl">
+          <div className="bg-black/50 backdrop-blur-md rounded-2xl px-6 py-4 border border-white/10 shadow-2xl">
             <div className="flex items-center space-x-8">
               {/* Home */}
               <button 
