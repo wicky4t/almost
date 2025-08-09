@@ -811,7 +811,7 @@ useEffect(() => {
     className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 opacity-0 animate-fade-in-delayed"
     style={{ animationDelay: '0.3s', animationFillMode: 'forwards' }}
   >
-    <div className="bg-white/10 backdrop-blur-xl rounded-2xl px-8 py-4 border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
+    <div className="bg-white/10 backdrop-blur-[40px] rounded-2xl px-8 py-4 border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
       <div className="flex items-center justify-center space-x-10">
         
         {/* Home */}
