@@ -708,7 +708,7 @@ useEffect(() => {
             </div>
           </div>
 
-       {/* 6x4 Grid of 9:16 Videos */}
+        {/* 6x4 Grid of 9:16 Videos */}
 <div className="relative mb-20 z-20">
   <h3 className="text-3xl md:text-4xl font-bosenAlt text-black/80 mb-8 text-center tracking-tight">
     SOCIAL CONTENT
@@ -728,16 +728,17 @@ useEffect(() => {
       "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4",
       "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
     ].map((src, i) => (
-      <VideoPlayer
-        key={i}
-        src={src}
-        title={`VIDEO ${String(i + 1).padStart(2, '0')}`}
-        aspectRatio="9/16"
-      />
-    ))}
+      <div key={i} className="aspect-[9/16] bg-black rounded-lg overflow-hidden">
+        <video
+          src={src}
+          controls
+          preload="metadata"
+          className="w-full h-full object-cover"
+        />
+      </div>
+    ))} 
   </div>
 </div>
-
 
         </div>
       </div>
